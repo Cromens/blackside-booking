@@ -1,7 +1,9 @@
 from flask import Flask, request
 import requests
+from flask_cors import CORS  # 👈 добавили
 
 app = Flask(__name__)
+CORS(app)  # 👈 разрешить кросс-доменные запросы
 
 # === CONFIG ===
 BOT_TOKEN = '7857665629:AAHNhtGs5DmlUEXcfVWVps2U-w4eIQQScF0'
